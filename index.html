@@ -37,7 +37,30 @@
 </head>
 
 <body>
+  <script>
+    function findPlaceId() {
+        // Replace 'YOUR_GOOGLE_MAPS_API_KEY' with your actual API key
+        const apiKey = 'AIzaSyDVzCx_0rTqD9RW6beCtqFzBQnI7_JHS6Q';
+        const coordinates = '19.1478395,72.9447032';
 
+        const apiUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${coordinates}&key=${apiKey}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.predictions && data.predictions.length > 0) {
+                    const placeId = data.predictions[0].place_id;
+                    console.log('Place ID:', placeId);
+                } else {
+                    console.error('No predictions found.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Call the function when the page loads
+    findPlaceId();
+</script>
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -86,7 +109,29 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>My career objective is to deliver my skills in IT industry and deliver the best through a continuous learning process and challenging Projects.</p>
+          <p>Hello! I'm Pankaj Suresh Jadhav, a seasoned Sr. Software Engineer with a decade-long immersion in the dynamic world of product-based app development. My journey has been fueled by a passion for crafting innovative and user-centric applications for both Android and iOS platforms.</p>
+        </div>
+
+        <div class="section-title">
+          <h2>Professional Journey</h2>
+          <p>Over the years, I've had the privilege of leading cross-functional teams through the entire product lifecycle. My expertise lies in leveraging technologies such as Java, Kotlin, Swift, and Flutter to bring ideas to life. I thrive on the challenges of API integration, the implementation of design patterns (MVC, MVVM, MVP), and staying on the cutting edge of technological advancements.</p>
+        </div>
+
+
+        <div class="section-title">
+          <h2>Philosophy</h2>
+          <p>I believe in the power of technology to transform ideas into impactful solutions. Each project is an opportunity to blend creativity with functionality, ensuring a seamless user experience and driving tangible results.</p>
+        </div>
+
+
+        <div class="section-title">
+          <h2>Current Focus</h2>
+          <p>In my current role at Monocept Consulting Pvt Ltd, I lead the development of Instabiz, a project that streamlines business operations through meticulous API integration and a focus on user experience. Additionally, I've contributed to projects like Faveo Plus (Care Health Insurance) and Piramal Finance LVS (Piramal Housing Finance pvt ltd), where my emphasis on lead management and verification processes has added significant value.</p>
+        </div>
+
+        <div class="section-title">
+          <h2>Continuous Learning</h2>
+          <p>My journey in the ever-evolving tech landscape has been complemented by a commitment to continuous learning. I've earned certifications in Java, Android, iOS, and Flutter development, ensuring that my skill set remains at the forefront of industry standards.</p>
         </div>
 
         <div class="row">
@@ -103,7 +148,8 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>16 Oct 1993</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>pjadhav138.github.io/portfolio/</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+918898527975</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <a href="tel:+918898527975">(+91) 88985-27975</a><span>
+                  </span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Mumbai , Maharashra , India </span></li>
                 </ul>
               </div>
@@ -111,7 +157,7 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>29</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachlers of Science in Information Technology</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>pjadhav138@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:pjadhav138@gmail.com">pjadhav138@gmail.com</a></span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
@@ -272,8 +318,8 @@
               </em></p>
               <ul>
                 <li>Mumbai, Maharashtra</li>
-                <li>(+91) 88985-27975</li>
-                <li>pjadhav138@gmail.com</li>
+                <li><a href="tel:+918898527975">(+91) 88985-27975</a></li>
+                <li><a href="mailto:pjadhav138@gmail.com">pjadhav138@gmail.com</a></li>
               </ul>
             </div>
 
@@ -309,14 +355,11 @@
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <h4>Mobile Application Developer</h4>
+              <h5>Oct 2019 - April 2021</h5>
+              <p><em>RUPEECIRCLE | Mumbai, Maharashtra</em></p>
               <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                As a Mobile Application Developer at RupeeCircle, contributed to the development and enhancement of financial solutions, implementing key features and ensuring a seamless user experience. Responsibilities included API integration, performance optimization, and collaboration on innovative mobile applications.
               </ul>
             </div>
 
@@ -630,7 +673,7 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Bhandup , Mumbai ,Maharashtra , India</p>
               </div>
 
               <div class="email">
@@ -645,7 +688,7 @@
                 <p>+1 5589 55488 55s</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:YOUR_PLACE_ID&key=YOUR_GOOGLE_MAPS_EMBED_API_KEY" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
